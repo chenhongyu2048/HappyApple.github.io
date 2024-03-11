@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>新年快乐</title><!-- 这是网页标题 -->
+<title>岁月如梭</title><!-- 这是网页标题 -->
 <style>
 body{
   overflow: hidden;
@@ -134,20 +134,20 @@ window.addEventListener("resize", onResize);
 requestAnimationFrame(render);
  
 window.onload=function starttime(){
-    time(h1,'2024/2/10');     // 2023年春节时间
+    time(h1,'2024/1/13');     // 2023年春节时间
     ptimer = setTimeout(starttime,1000); // 添加计时器
 }
  
     function time(obj,futimg){
         var nowtime = new Date().getTime(); // 现在时间转换为时间戳
         var futruetime =  new Date(futimg).getTime(); // 未来时间转换为时间戳
-        var msec = futruetime-nowtime; // 毫秒 未来时间-现在时间
+        var msec = nowtime - futruetime; // 毫秒 未来时间-现在时间
         var time = (msec/1000);  // 毫秒/1000
         var day = parseInt(time/86400); // 天  24*60*60*1000
         var hour = parseInt(time/3600)-24*day;    // 小时 60*60 总小时数-过去的小时数=现在的小时数
         var minute = parseInt(time%3600/60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
         var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
-        obj.innerHTML="<br>距离2024年春节还有：<br>"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"<br><span>愿您所想的事都顺心如意。愿您永远开心幸福。<br>\"You are my today and all of my tomorrows.\" <br>祝我最亲爱的陈果小姐新年快乐！"+"</span>"
+        obj.innerHTML="<br>自从在一起已经：<br>"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"<br><span>愿您所想的事都顺心如意。愿您永远开心幸福。<br>\"You are my today and all of my tomorrows.\" <br>祝我最亲爱的陈果小姐新年快乐！"+"</span>"
         return true;
     }
 </script>
